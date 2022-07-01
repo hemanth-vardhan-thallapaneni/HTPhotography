@@ -1,0 +1,86 @@
+<div class="header">
+  <a class="logo animate__animated animate__flash animate__delay-5s" href="/"
+    ><img src="../../../assets/icon.png" width="50px" height="70px" alt="logo"
+  /></a>
+  <nav>
+    <ul class="nav__links animate__animated animate__fadeIn animate__delay-2s">
+      <li>
+        <a
+          routerLink="mobilewallpapers"
+          routerLinkActive="active"
+          class="nav-link"
+          >Mobile wallpapers</a
+        >
+      </li>
+      <li>
+        <a routerLink="desktopwallpapers" routerLinkActive="active"
+          >Desktop wallpapers</a
+        >
+      </li>
+      <li>
+        <a routerLink="download" routerLinkActive="active">Downloads</a>
+      </li>
+      <li *ngIf="!email" class="cta">
+        <a routerLink="signin" routerLinkActive="active">Sign in</a>
+      </li>
+      <li *ngIf="admin">
+        <a routerLink="upload" routerLinkActive="active">uploadimage</a>
+      </li>
+      <li class="animate__animated animate__fadeIn" *ngIf="email">
+        <a>{{ email }}</a>
+      </li>
+      <li *ngIf="email" class="cta" (click)="logout()">
+        <a routerLink="signin" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </nav>
+  <p
+    class="menu cta animate__animated animate__fadeIn"
+    (click)="toggleNavBar()"
+  >
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </p>
+</div>
+<div
+  id="mobile__menu"
+  class="overlay"
+  [ngClass]="{ 'overlay--active': navbarOpen }"
+>
+  <a class="close" (click)="removeNavBar()">&times;</a>
+  <div class="overlay__content">
+    <a
+      (click)="removeNavBar()"
+      routerLink="mobilewallpapers"
+      routerLinkActive="active"
+      >Mobile wallpapers</a
+    >
+    <a
+      (click)="removeNavBar()"
+      routerLink="desktopwallpapers"
+      routerLinkActive="active"
+      >Desktop wallpapers</a
+    >
+    <a (click)="removeNavBar()" routerLink="download" routerLinkActive="active"
+      >Downloads</a
+    >
+    <a (click)="removeNavBar()" routerLink="signin" routerLinkActive="active"
+      >Sign in</a
+    >
+    <a
+      (click)="removeNavBar()"
+      *ngIf="admin"
+      routerLink="upload"
+      routerLinkActive="active"
+      >uploadimage</a
+    >
+    <a (click)="removeNavBar()" *ngIf="email">{{ name }}</a>
+    <a
+      (click)="removeNavBar()"
+      *ngIf="email"
+      (click)="logout()"
+      routerLink="signin"
+      routerLinkActive="active"
+      >Logout</a
+    >
+  </div>
+</div>

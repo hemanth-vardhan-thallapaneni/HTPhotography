@@ -1,0 +1,48 @@
+<div class="contianer animate__animated animate__fadeIn animate__delay-2s">
+    <div class="div1">
+        <div class="text animate__animated animate__fadeIn animate__delay-2s">Desktop wallpapers</div>
+        <ul class="filter animate__animated animate__fadeIn animate__delay-3s">
+            <li filter="deep"><a (click)="filterBy('nature')">Nature</a></li>
+            <!-- <li filter="deep"><a (click)="filterBy('minimal')">Minimal</a></li>
+            <li filter="deep"><a (click)="filterBy('levi')">Levitation</a></li>  -->
+            <li filter="deep"><a (click)="filterBy('candid')">Candid</a></li>
+        </ul>
+        <button class="menu cta" (click)="toggleNavBar()"><i class="fa fa-filter" aria-hidden="true"></i></button>
+        <div id="mobile__menu" class="overlay" [ngClass]= "{'overlay--active':navbarOpen}">
+          <a class="close" (click)="removeNavBar()">&times;</a>
+          <div class="overlay__content">
+            <li (click)="removeNavBar()"><a (click)="filterBy('nature')">Nature</a></li>
+            <!-- <li (click)="removeNavBar()"><a (click)="filterBy('minima')">Minimal</a></li>
+            <li (click)="removeNavBar()"><a (click)="filterBy('levi')">Levitation</a></li>  -->
+            <li (click)="removeNavBar()"><a (click)="filterBy('street')">Candid</a></li>
+          </div>
+        </div>
+
+
+
+      <div *ngIf ="items$ |async; let items">
+        <div class="float" *ngFor="let item of items">
+          <div class="float">
+            <div class="card" data-aos="fade-right"  data-aos-delay="3000">
+              <img class="card-img-top" src="{{item.payload.val().picture}}" alt="Card image cap">
+              <div class="button"><a class="img" href="{{item.payload.val().picture}}" download="wallpaper.jpeg">Download</a></div>
+          </div>
+          </div>
+
+        </div>
+
+        <div *ngIf="items.length === 0">No results, try clearing filters</div>
+      </div>
+
+      <div *ngIf = nonfilter class="position">
+        <div class="float" *ngFor= "let img of images">
+          <div class="card">
+            <img class="card-img-top" src="{{img.picture}}" alt="Card image cap">
+            <div class="button"><a class="img" href="{{img.picture}}">Download</a></div>
+        </div>
+
+      </div>
+         </div>
+         <app-footer  class="animate__animated animate__fadeIn animate__delay-5s"> </app-footer>
+</div>
+

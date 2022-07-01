@@ -1,0 +1,28 @@
+.bottom{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+}
+footer{
+    height: 7vh;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.social-media{
+    font-size: 1em;
+    text-align: center;
+    justify-content: center;
+     flex: 1;
+}
+.social-media a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+.text{
+    text-align: center;
+    font-size: 1em;
+    flex: 1;
+}

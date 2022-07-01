@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+/* body {
+    padding-top: 65px;
+} */
+.main {
+  display: block;
+  overflow: hidden;
+  height: 100vh;
+  width: 99vw;
+  background-color: black;
+}
+
+.title {
+  text-align: center;
+  margin: 130px 0px;
+  z-index: 1;
+  font-size: 4em;
+  color: white;
+}
+.title h1 {
+  font-size: 3em;
+  font-family: "Cinzel", serif;
+}
+.arrow {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+.sub {
+  font-size: 3em;
+  font-family: "Cinzel", serif;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .main {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+  }
+  .title {
+    text-align: center;
+    margin: 350px -40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    z-index: 1;
+    font-size: 3em;
+    color: white;
+  }
+  .title h1 {
+    font-size: 45px;
+    /* margin-left: 20px; */
+    font-family: "Cinzel", serif;
+  }
+}
+.click {
+  height: 200px;
+  font-size: 6em;
+  margin-left: 25px;
+  font-family: "Playfair Display", serif;
+}
+.main1 {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+.main1 img {
+  margin-top: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  /* flex: 2px; */
+}
+.animate__fadeInUp {
+  --animate-duration: 2s;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .click {
+    height: 50px;
+    font-size: 2em;
+    /* margin-top: 100px; */
+    margin-left: 15px;
+    font-family: "Playfair Display", serif;
+  }
+  .main1 {
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .main1 img {
+    margin-bottom: 10px;
+    flex: 1px;
+  }
+}
+
+/* animation */
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 4s;
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 3s;
+  --animation-delay: 5s;
+}

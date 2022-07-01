@@ -1,0 +1,31 @@
+<div class="colour animate__animated animate__fadeIn">
+<div class="whole">
+    <div>
+        <img class="animate__animated animate__slideInLeft" src="../../../assets/signup-image-removebg-preview.png" alt="">
+    </div>
+    <div>
+        <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        
+            <div class="form-group">
+                <br>
+                <h2>Hello Stranger!</h2>
+                <h3>Sign Up</h3>
+                <br>
+              <label>Name</label>
+              <input type="name" class="form-control" id="name" name="name" ngModel required width="58px">
+            </div>
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" class="form-control" id="email" name="email" ngModel required width="58px" >
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" id="password" name="password" ngModel required>
+            </div>
+            <button type="submit" class="">Submit</button>
+                
+          </form>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>

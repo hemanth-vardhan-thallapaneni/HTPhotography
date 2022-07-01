@@ -1,0 +1,30 @@
+<div class="colour animate__animated animate__fadeIn">
+<div class="whole">
+    <div>
+        <img class="animate__animated animate__slideInLeft" src="../../../assets/signin-image.png" alt="">
+    </div>
+    <div>
+        <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="form-group">
+                <br>
+                <br>
+                <h3>Sign In</h3>
+                <br>
+                  <label>Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" ngModel required width="58px" >
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" id="password" name="password" ngModel required>
+                </div>
+            <button type="submit" class="">Submit</button>
+            <br>
+            <br>
+            <p><a routerLink="/signup">New User?</a></p>
+            <p>Sign in to access wallpapers.</p>
+          </form>
+    </div>
+</div>
+
+</div>
+<app-footer></app-footer>
